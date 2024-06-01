@@ -1,7 +1,7 @@
 const express = require('express');
 const router=express.Router();
 
-const Person = require('./../models/person');
+const Person = require('../models/person');
 
 //POST route to add person
 router.post('/',async (req,res)=>{
