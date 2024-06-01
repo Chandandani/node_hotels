@@ -1,7 +1,12 @@
 const mongoose = require('mongoose');
+require('dotenv').config(); // To load environment variables from a .env file
+
+// Define MongoDB connection URL from environment variables
+//const mongoURL = process.env.MONGO_URL || 'mongodb://127.0.0.1:27017/hotel';
 
 // Define MongoDB connection URL
-const mongoURL = 'mongodb://127.0.0.1:27017/hotel';
+//const mongoURL = 'mongodb://127.0.0.1:27017/hotel';
+const mongoURL =process.env.MONGODB_URL;
 
 // Setup MongoDB Connection
 mongoose.connect(mongoURL)
